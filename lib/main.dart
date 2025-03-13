@@ -1,11 +1,18 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:random_user_generator/logic/config/theme/theme.dart';
 import 'package:random_user_generator/logic/riverpod/observer.dart';
 import 'package:random_user_generator/logic/riverpod/theme_switcher.dart';
 import 'package:random_user_generator/presentation/screens/main_screen.dart';
 
-void main() {
+void main() async{
+  
+  await Hive.initFlutter();
+  var themebox = await Hive.openBox('AppTheme');
+  
   runApp(
     ProviderScope(
       observers: [Observer()],
