@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class HomePage {
-  Widget build(BuildContext context){
-    return SizedBox(
-      child: Center(
-        child: Text('HomePage bitch', style: TextStyle(fontSize: 32),),
-      ),
+class HomePage extends ConsumerWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      body: const Center(child: Text('HomePage', style: TextStyle(fontSize: 32))),
     );
   }
 }

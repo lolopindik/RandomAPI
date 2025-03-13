@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:random_user_generator/logic/riverpod/navigator/navigator.dart';
+import 'package:random_user_generator/logic/riverpod/navigator.dart';
 import 'package:random_user_generator/presentation/screens/favorites_screen.dart';
 import 'package:random_user_generator/presentation/screens/home_screen.dart';
 import 'package:random_user_generator/presentation/widgets/app_bar_widget.dart';
@@ -15,7 +15,7 @@ class MainScreen extends ConsumerWidget {
     return Scaffold(
       bottomNavigationBar: BottomBarWidget().build(context, ref),
       appBar: AppBarWidget().build(context),
-      drawer: DrawerWidget().build(context),
+      drawer: DrawerWidget().build(context, ref),
       body: IndexedStack(
         index: ref.watch(riverpodnavigator).index,
         children: [
