@@ -15,8 +15,8 @@ class BottomBarWidget {
           label: 'Random Users',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.star),
-          label: 'Favorite users',
+          icon: Icon(Icons.list),
+          label: 'Random list',
         ),
       ],
     );

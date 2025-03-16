@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:random_user_generator/logic/riverpod/navigator.dart';
-import 'package:random_user_generator/presentation/screens/favorites_screen.dart';
+import 'package:random_user_generator/presentation/screens/list_of_users_screen.dart';
 import 'package:random_user_generator/presentation/screens/home_screen.dart';
 import 'package:random_user_generator/presentation/widgets/app_bar_widget.dart';
 import 'package:random_user_generator/presentation/widgets/bottom_bar_widget.dart';
@@ -20,7 +20,7 @@ class MainScreen extends ConsumerWidget {
         index: ref.watch(riverpodnavigator).index,
         children: [
           HomeScreen(),
-          FavotitesScreen()
+          ListOfUsersScreen(),
         ],
       ),
     );

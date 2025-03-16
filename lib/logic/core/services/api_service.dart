@@ -5,9 +5,13 @@ import 'package:flutter/rendering.dart';
 import 'package:random_user_generator/logic/config/constrains/api_constarins.dart';
 import 'package:random_user_generator/logic/core/model/fake_user.dart';
 
-class ApiSevive{
+class ApiSevice{
 
-  final dio = Dio();
+   final dio = Dio(BaseOptions(
+    connectTimeout: const Duration(seconds: 5),
+    receiveTimeout: const Duration(seconds: 3),
+  ));
+
   var uri = ApiConstants.baseUrl;
 
   Future<FakeUser?> getUser() async {
