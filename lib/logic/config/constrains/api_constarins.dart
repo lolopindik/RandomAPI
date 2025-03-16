@@ -1,4 +1,4 @@
 class ApiConstants{
-  //! it should ne in .env
+  //! it should be in .env
   static const String baseUrl = 'https://randomuser.me/api/';
 }
