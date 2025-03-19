@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:random_user_generator/logic/core/model/fake_user.dart';
-import 'package:random_user_generator/logic/core/services/api_service.dart';
+import 'package:random_user_generator/data/model/fake_user.dart';
+import 'package:random_user_generator/data/services/api_service.dart';
 
 final userProvider = FutureProvider<FakeUser?>((ref) async {
   final apiService = ApiSevice();

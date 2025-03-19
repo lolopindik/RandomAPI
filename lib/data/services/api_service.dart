@@ -3,7 +3,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/rendering.dart';
 import 'package:random_user_generator/logic/config/constrains/api_constarins.dart';
-import 'package:random_user_generator/logic/core/model/fake_user.dart';
+import 'package:random_user_generator/data/model/fake_user.dart';
 
 class ApiSevice{
 
