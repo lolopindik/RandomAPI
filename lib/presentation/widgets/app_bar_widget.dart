@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppBarWidget {
   PreferredSizeWidget? build(BuildContext context) {
     return AppBar(
+      scrolledUnderElevation: 0,
       centerTitle: true,
       backgroundColor: Theme.of(context).primaryColor,
       leading: Builder(
